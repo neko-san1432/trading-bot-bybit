@@ -1,0 +1,400 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+#  Usually these files are written by a python script from a template
+#  before PyInstaller builds the exe, so as to inject date/other infos into it.
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff:
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Flask stuff:
+instance/
+.webassets-cache
+
+# Scrapy stuff:
+.scrapy
+
+# Sphinx documentation
+docs/_build/
+
+# PyBuilder
+target/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IPython
+profile_default/
+ipython_config.py
+
+# pyenv
+.python-version
+
+# pipenv
+#   According to pypa/pipenv#598, it is recommended to include Pipfile.lock in version control.
+#   However, in case of collaboration, if having platform-specific dependencies or dependencies
+#   having no cross-platform support, pipenv may install dependencies that don't work, or not
+#   install all needed dependencies.
+#Pipfile.lock
+
+# PEP 582; used by e.g. github.com/David-OConnor/pyflow
+__pypackages__/
+
+# Celery stuff
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath parsed files
+*.sage.py
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# Trading bot specific files
+*.log
+log.txt
+*.db
+*.sqlite
+*.sqlite3
+
+# API keys and sensitive data
+.env
+.env.local
+.env.production
+.env.staging
+config.json
+secrets.json
+api_keys.json
+
+# Backtest results
+backtest_results/
+results/
+*.csv
+*.xlsx
+*.json
+
+# Model files
+*.pkl
+*.joblib
+*.h5
+*.hdf5
+*.model
+
+# Data files
+data/
+datasets/
+*.csv
+*.parquet
+*.feather
+
+# Temporary files
+temp/
+tmp/
+*.tmp
+*.temp
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Windows
+*.exe
+*.msi
+*.msm
+*.msp
+
+# GPU/CUDA specific
+*.cubin
+*.fatbin
+*.ptx
+*.cudafe
+*.cudafe1
+*.cudafe2
+*.cudafe3
+*.cudafe4
+*.cudafe5
+*.cudafe6
+*.cudafe7
+*.cudafe8
+*.cudafe9
+*.cudafe10
+*.cudafe11
+*.cudafe12
+*.cudafe13
+*.cudafe14
+*.cudafe15
+*.cudafe16
+*.cudafe17
+*.cudafe18
+*.cudafe19
+*.cudafe20
+*.cudafe21
+*.cudafe22
+*.cudafe23
+*.cudafe24
+*.cudafe25
+*.cudafe26
+*.cudafe27
+*.cudafe28
+*.cudafe29
+*.cudafe30
+*.cudafe31
+*.cudafe32
+*.cudafe33
+*.cudafe34
+*.cudafe35
+*.cudafe36
+*.cudafe37
+*.cudafe38
+*.cudafe39
+*.cudafe40
+*.cudafe41
+*.cudafe42
+*.cudafe43
+*.cudafe44
+*.cudafe45
+*.cudafe46
+*.cudafe47
+*.cudafe48
+*.cudafe49
+*.cudafe50
+*.cudafe51
+*.cudafe52
+*.cudafe53
+*.cudafe54
+*.cudafe55
+*.cudafe56
+*.cudafe57
+*.cudafe58
+*.cudafe59
+*.cudafe60
+*.cudafe61
+*.cudafe62
+*.cudafe63
+*.cudafe64
+*.cudafe65
+*.cudafe66
+*.cudafe67
+*.cudafe68
+*.cudafe69
+*.cudafe70
+*.cudafe71
+*.cudafe72
+*.cudafe73
+*.cudafe74
+*.cudafe75
+*.cudafe76
+*.cudafe77
+*.cudafe78
+*.cudafe79
+*.cudafe80
+*.cudafe81
+*.cudafe82
+*.cudafe83
+*.cudafe84
+*.cudafe85
+*.cudafe86
+*.cudafe87
+*.cudafe88
+*.cudafe89
+*.cudafe90
+*.cudafe91
+*.cudafe92
+*.cudafe93
+*.cudafe94
+*.cudafe95
+*.cudafe96
+*.cudafe97
+*.cudafe98
+*.cudafe99
+*.cudafe100
+*.cudafe101
+*.cudafe102
+*.cudafe103
+*.cudafe104
+*.cudafe105
+*.cudafe106
+*.cudafe107
+*.cudafe108
+*.cudafe109
+*.cudafe110
+*.cudafe111
+*.cudafe112
+*.cudafe113
+*.cudafe114
+*.cudafe115
+*.cudafe116
+*.cudafe117
+*.cudafe118
+*.cudafe119
+*.cudafe120
+*.cudafe121
+*.cudafe122
+*.cudafe123
+*.cudafe124
+*.cudafe125
+*.cudafe126
+*.cudafe127
+*.cudafe128
+*.cudafe129
+*.cudafe130
+*.cudafe131
+*.cudafe132
+*.cudafe133
+*.cudafe134
+*.cudafe135
+*.cudafe136
+*.cudafe137
+*.cudafe138
+*.cudafe139
+*.cudafe140
+*.cudafe141
+*.cudafe142
+*.cudafe143
+*.cudafe144
+*.cudafe145
+*.cudafe146
+*.cudafe147
+*.cudafe148
+*.cudafe149
+*.cudafe150
+*.cudafe151
+*.cudafe152
+*.cudafe153
+*.cudafe154
+*.cudafe155
+*.cudafe156
+*.cudafe157
+*.cudafe158
+*.cudafe159
+*.cudafe160
+*.cudafe161
+*.cudafe162
+*.cudafe163
+*.cudafe164
+*.cudafe165
+*.cudafe166
+*.cudafe167
+*.cudafe168
+*.cudafe169
+*.cudafe170
+*.cudafe171
+*.cudafe172
+*.cudafe173
+*.cudafe174
+*.cudafe175
+*.cudafe176
+*.cudafe177
+*.cudafe178
+*.cudafe179
+*.cudafe180
+*.cudafe181
+*.cudafe182
+*.cudafe183
+*.cudafe184
+*.cudafe185
+*.cudafe186
+*.cudafe187
+*.cudafe188
+*.cudafe189
+*.cudafe190
+*.cudafe191
+*.cudafe192
+*.cudafe193
+*.cudafe194
+*.cudafe195
+*.cudafe196
+*.cudafe197
+*.cudafe198
+*.cudafe199
+*.cudafe200

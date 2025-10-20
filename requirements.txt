@@ -1,0 +1,15 @@
+pandas>=1.3
+numpy>=1.21
+ta>=0.10.0
+click>=8.0
+pybit>=2.4
+python-dotenv>=0.19
+requests>=2.25.0
+
+# Optional GPU acceleration (install only if you have compatible CUDA)
+# For Windows with CUDA 12.x, cupy-cuda12x provides prebuilt wheels
+numba>=0.59
+cupy-cuda12x>=12.3.0; platform_system == "Windows"
+# If cupy-cuda12x fails, install the variant matching your CUDA (e.g., cupy-cuda11x)
+# cuDF is not on PyPI in a simple form; install via RAPIDS per CUDA/toolkit version.
+# See: https://rapids.ai/start.html
