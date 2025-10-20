@@ -86,15 +86,15 @@ class MomentumTrader:
         self.scan_interval_sec = 2  # 2 second scan for momentum
         self.max_concurrent_trades = 2  # Only 2 positions for small balance
         
-        print(f"🚀 High Momentum Trader - {env_name}")
-        print(f"🌐 API Endpoint: {'https://api-demo.bybit.com (Demo)' if demo else 'https://api.bybit.com (Mainnet)'}")
-        print(f"💰 Starting Balance: ${self.start_balance}")
-        print(f"🎯 Target Balance: ${self.target_balance}")
-        print(f"📈 Leverage: {self.config.leverage}x")
-        print(f"🎯 Risk per Trade: {self.config.risk_per_trade*100}%")
-        print(f"⚡ Max Positions: {self.config.max_positions}")
-        print(f"📊 Min 24h Gain: {self.config.min_24h_gain*100}%")
-        print(f"📊 Max 24h Gain: {self.config.max_24h_gain*100}%")
+        print(f"High Momentum Trader - {env_name}")
+        print(f"API Endpoint: {'https://api-demo.bybit.com (Demo)' if demo else 'https://api.bybit.com (Mainnet)'}")
+        print(f"Starting Balance: ${self.start_balance}")
+        print(f"Target Balance: ${self.target_balance}")
+        print(f"Leverage: {self.config.leverage}x")
+        print(f"Risk per Trade: {self.config.risk_per_trade*100}%")
+        print(f"Max Positions: {self.config.max_positions}")
+        print(f"Min 24h Gain: {self.config.min_24h_gain*100}%")
+        print(f"Max 24h Gain: {self.config.max_24h_gain*100}%")
     
     def _setup_logging(self):
         """Setup logging for momentum trading"""

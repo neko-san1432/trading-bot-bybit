@@ -47,12 +47,12 @@ def main():
     # Determine API endpoint
     demo = args.demo
     
-    print("🚀 Aggressive Trading Bot")
+    print("Aggressive Trading Bot")
     print("=" * 50)
-    print(f"📅 Started: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
-    print(f"🎯 Strategy: {args.strategy.upper()}")
-    print(f"🌐 API Endpoint: {'https://api-demo.bybit.com (Demo)' if demo else 'https://api.bybit.com (Mainnet)'}")
-    print(f"💰 Balance: ${args.balance:,.2f}")
+    print(f"Started: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+    print(f"Strategy: {args.strategy.upper()}")
+    print(f"API Endpoint: {'https://api-demo.bybit.com (Demo)' if demo else 'https://api.bybit.com (Mainnet)'}")
+    print(f"Balance: ${args.balance:,.2f}")
     print("=" * 50)
     
     try:

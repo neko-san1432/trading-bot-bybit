@@ -2,7 +2,7 @@
 
 This project implements a comprehensive crypto trading strategy that combines **technical analysis**, **sentiment analysis**, and **fundamental analysis** to identify high-probability trading opportunities. The strategy supports multiple trading styles (scalping, day trading, swing trading) and provides both backtesting and live trading capabilities.
 
-## 🚀 Features
+## Features
 
 ### Multi-Analysis Approach
 - **Technical Analysis**: EMA crossovers, RSI divergence, volume analysis, market structure
@@ -41,41 +41,49 @@ This project implements a comprehensive crypto trading strategy that combines **
 - **Connection Recovery**: Automatic detection and recovery from connection issues
 - **Trading Safety**: Prevents trading during connection problems
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 ├── backtest/
 │   ├── strategy.py              # Original scalping strategy
 │   ├── enhanced_strategy.py     # Enhanced strategy with 50% target
-│   ├── trend_scalping_strategy.py # NEW: Trend scalping strategy (50-65% win rate)
+│   ├── trend_scalping_strategy.py # Trend scalping strategy (50-65% win rate)
+│   ├── trend_scalping_strategy_clean.py # Clean version of trend scalping
 │   ├── pair_discovery.py        # Dynamic pair discovery system
 │   ├── run_backtest.py          # Original backtest runner
 │   ├── run_enhanced_backtest.py # Enhanced backtest runner
-│   └── run_trend_scalping_backtest.py # NEW: Trend scalping backtest runner
+│   └── run_trend_scalping_backtest.py # Trend scalping backtest runner
 ├── live/
 │   ├── trader.py                # Original live trader
 │   ├── enhanced_trader.py       # Enhanced live trader
 │   ├── enhanced_dynamic_trader.py # Dynamic pair discovery trader
-│   └── trend_scalping_trader.py # NEW: Trend scalping live trader
+│   ├── trend_scalping_trader.py # Trend scalping live trader
+│   ├── trend_scalping_trader_clean.py # Clean version of trend scalping trader
+│   ├── momentum_trader.py       # High momentum trading bot
+│   └── aggressive_trader.py     # Aggressive trading strategies
 ├── examples/
 │   ├── strategy_demo.py         # Basic strategy demonstration
-│   ├── trend_scalping_demo.py   # NEW: Trend scalping demonstration
 │   └── ping_demo.py            # Ping test functionality demo
-├── ping_utils.py               # Comprehensive ping test utility
-├── test_ping.py               # Standalone ping test script
-│   └── dynamic_strategy_demo.py # Dynamic features demonstration
 ├── tests/
 │   ├── test_strategy.py         # Original strategy tests
 │   └── test_enhanced_strategy.py # Enhanced strategy tests
+├── run_momentum_bot.py          # High momentum trading bot runner
+├── run_aggressive_bot.py        # Aggressive trading bot runner
+├── position_calculator.py       # Position sizing calculator
+├── ping_utils.py               # Comprehensive ping test utility
+├── gpu_utils.py                # GPU acceleration utilities
+├── high_momentum_strategy.py   # High momentum trading strategy
+├── aggressive_strategy.py      # Aggressive trading strategies
+├── aggressive_configs.py       # Aggressive strategy configurations
 └── ENHANCED_STRATEGY_GUIDE.md   # Comprehensive strategy guide
 ```
 
-## 🛠️ Requirements
+## Requirements
 
 - Python 3.9+
 - See `requirements.txt` for packages
 
-## 🚀 Quick Start
+## Quick Start
 
 ### 1. Installation
 
@@ -115,16 +123,19 @@ python live/enhanced_trader.py --symbols BTCUSDT ETHUSDT --style swing --testnet
 # Dynamic trader with automatic pair discovery (RECOMMENDED)
 python live/enhanced_dynamic_trader.py --style scalping --testnet
 
-# Trend scalping trader (NEW - Higher win rate, smaller targets)
+# Trend scalping trader (Higher win rate, smaller targets)
 python live/trend_scalping_trader.py --testnet
+
+# High momentum trading bot (50-100% 24h gainers)
+python run_momentum_bot.py --demo --balance 1.7 --target 200 --yes
+
+# Aggressive trading strategies
+python run_aggressive_bot.py --demo --strategy scalping --balance 100 --yes
 ```
 
 ### 5. Connection Health Testing
 
 ```bash
-# Test Bybit connectivity
-python test_ping.py
-
 # Run ping test demo
 python examples/ping_demo.py
 
@@ -132,7 +143,14 @@ python examples/ping_demo.py
 python -c "from ping_utils import BybitPingTester; BybitPingTester().monitor_connection_health(60)"
 ```
 
-## 📊 Strategy Components
+### 6. Position Sizing Calculator
+
+```bash
+# Calculate position sizes for small balances
+python run_momentum_bot.py --calculator
+```
+
+## Strategy Components
 
 ### Trend Scalping Strategy (NEW)
 - **Multi-Timeframe EMAs**: 5/13/21/50/200 for trend confirmation
@@ -158,7 +176,7 @@ python -c "from ping_utils import BybitPingTester; BybitPingTester().monitor_con
 - **Macro Events**: Regulatory news, exchange listings
 - **Risk Filters**: Avoid trading during negative events
 
-## 🎯 Entry Criteria
+## Entry Criteria
 
 ### Long Entry
 1. **Technical**: At least 2 signals (trend breakout, RSI divergence, support bounce)
@@ -170,7 +188,7 @@ python -c "from ping_utils import BybitPingTester; BybitPingTester().monitor_con
 2. **Sentiment**: Combined score < -0.6
 3. **Fundamental**: Score < -0.3, negative catalysts present
 
-## 🔍 Connection Health Monitoring
+## Connection Health Monitoring
 
 ### Ping Test Features
 - **DNS Resolution**: Tests domain name resolution
@@ -204,7 +222,7 @@ results = tester.comprehensive_ping_test()
 tester.monitor_connection_health(duration_minutes=60)
 ```
 
-## 📈 Performance Metrics
+## Performance Metrics
 
 - **Win Rate**: Target > 60%
 - **Profit Factor**: Target > 1.5
@@ -212,7 +230,7 @@ tester.monitor_connection_health(duration_minutes=60)
 - **Max Drawdown**: Target < 10%
 - **Risk-Reward**: Target > 1.5:1
 
-## 🔧 Configuration
+## Configuration
 
 The strategy is highly configurable. You can modify:
 
@@ -225,7 +243,7 @@ The strategy is highly configurable. You can modify:
 
 See `ENHANCED_STRATEGY_GUIDE.md` for detailed configuration options.
 
-## 🧪 Testing
+## Testing
 
 Run the test suite:
 
@@ -233,20 +251,20 @@ Run the test suite:
 python tests/test_enhanced_strategy.py
 ```
 
-## 📚 Documentation
+## Documentation
 
 - **Strategy Guide**: `ENHANCED_STRATEGY_GUIDE.md` - Comprehensive strategy documentation
 - **Examples**: `examples/strategy_demo.py` - Strategy demonstration
 - **API Reference**: Code comments and docstrings
 
-## ⚠️ Disclaimer
+## Disclaimer
 
 This strategy is for educational purposes only. Cryptocurrency trading involves significant risk and may not be suitable for all investors. Past performance does not guarantee future results. Always do your own research and consider your risk tolerance before trading.
 
-## 🤝 Contributing
+## Contributing
 
 Feel free to submit issues, feature requests, or pull requests to improve the strategy.
 
-## 📄 License
+## License
 
 This project is open source and available under the MIT License.

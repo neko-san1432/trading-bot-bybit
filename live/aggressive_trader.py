@@ -130,13 +130,13 @@ class AggressiveTrader:
         self.daily_loss_limit = 0.10  # 10% daily loss limit
         self.emergency_stop = False
         
-        print(f"🚀 Aggressive Trader Initialized - {env_name}")
-        print(f"🌐 API Endpoint: {'https://api-demo.bybit.com (Demo)' if demo else 'https://api.bybit.com (Mainnet)'}")
-        print(f"💰 Account Balance: ${self.config.account_balance:,.2f}")
-        print(f"⚡ Max Positions: {self.config.max_positions}")
-        print(f"📈 Leverage: {self.config.leverage}x")
-        print(f"🎯 Risk per Trade: {self.config.risk_per_trade*100}%")
-        print(f"🛡️ Max Total Risk: {self.config.max_total_risk*100}%")
+        print(f"Aggressive Trader Initialized - {env_name}")
+        print(f"API Endpoint: {'https://api-demo.bybit.com (Demo)' if demo else 'https://api.bybit.com (Mainnet)'}")
+        print(f"Account Balance: ${self.config.account_balance:,.2f}")
+        print(f"Max Positions: {self.config.max_positions}")
+        print(f"Leverage: {self.config.leverage}x")
+        print(f"Risk per Trade: {self.config.risk_per_trade*100}%")
+        print(f"Max Total Risk: {self.config.max_total_risk*100}%")
     
     def _setup_logging(self):
         """Setup logging for aggressive trading"""
